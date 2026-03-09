@@ -2,8 +2,8 @@
 
 .gridContainer {
     display: grid;
-    grid-template-rows: [row-start row-1-start] 1fr [row-1-end row-2-start] 1fr [row-2-end row-3-start] 1fr [row-end row-3-end];
-    grid-template-columns: [col-start col-1-start] 1fr [col-1-end col-2-start] 1fr [col-2-end col-3-start] 1fr [col-end col-3-end];
+    grid-template-rows: repeat(6, [row-start] 1fr [row-end]);
+    grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
 }
 
 .templateColumns {
@@ -19,6 +19,6 @@
 }
 
 .one {
-    grid-row: row-2-start / row-end;
-    grid-column: col-2-start / col-end;
+    grid-row: row-start / row-end 3;
+    grid-column: col-start 2 / col-end 2
 }
