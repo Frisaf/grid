@@ -3,6 +3,13 @@ body {
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.2rem;
+    text-align: center;
+}
+
+.gridContainer {
     display: grid;
+    width: 60%;
     place-content: center;
+    margin-inline: auto;
+    gap: 3px;
 }
