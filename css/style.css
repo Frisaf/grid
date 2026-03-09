@@ -19,5 +19,6 @@
 }
 
 .one {
-    grid-row: row-1-end / span 3;
+    grid-row: row-2-start / row-end;
+    grid-column: col-2-start / col-end;
 }
