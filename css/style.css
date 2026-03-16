@@ -2,9 +2,9 @@
 
 .gridContainer {
     display: grid;
-    grid-template-areas: "header header" "content sidebar" "footer footer";
-    grid-template-rows: 200px 1fr 70px;
-    grid-template-columns: 1fr 200px;
+    grid-template-areas: "content content" "content content";
+    grid-template-rows: 100px 100px;
+    grid-template-columns: 1fr 1fr;
 }
 
 .templateColumns {
@@ -19,24 +19,18 @@
     color: white;
 }
 
-.one, .two {
-    grid-row-start: 2;
-    grid-column-end: span 2;
+.one, .two, .three {
+    grid-area: content;
 }
 
 .one {
-    grid-row-start: header-start;
-    grid-row-end: content-end;
-    grid-column-start: content-start;
-    grid-column-end: sidebar-start;
-    z-index: 1;
-    opacity: 50%;
-    background-color: red;
+    align-self: start;
 }
 
 .two {
-    grid-row-start: header-start;
-    grid-row-end: content-end;
-    grid-column-start: content-start;
-    grid-column-end: sidebar-end;
+    align-self: center;
+}
+
+.three {
+    align-self: end;
 }
