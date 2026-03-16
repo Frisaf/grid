@@ -2,8 +2,9 @@
 
 .gridContainer {
     display: grid;
-    grid-template-rows: [outer-start] 1fr [inner-start] 1fr [inner-end] 1fr [outer-end];
-    grid-template-columns: [outer-start] 1fr [inner-start] 1fr [inner-end] 1fr [outer-end];
+    grid-template-areas: "header header" "content sidebar" "footer footer";
+    grid-template-rows: 80px 1fr 70px;
+    grid-template-columns: 1fr 200px;
 }
 
 .templateColumns {
@@ -19,10 +20,10 @@
 }
 
 .one {
-    grid-row-start: header;
-    grid-row-end: header;
-    grid-column-start: header;
-    grid-column-end: header;
+    grid-row-start: header-start;
+    grid-row-end: content-start;
+    grid-column-start: footer-start;
+    grid-column-end: sidebar-end;
 }
 
 .two {
