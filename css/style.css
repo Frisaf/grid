@@ -2,9 +2,8 @@
 
 .gridContainer {
     display: grid;
-    grid-template-columns: 45px 60px;
-    grid-auto-columns: 1fr;
-    grid-auto-flow: column;
+    grid-template-rows: [outer-start] 1fr [inner-start] 1fr [inner-end] 1fr [outer-end];
+    grid-template-columns: [outer-start] 1fr [inner-start] 1fr [inner-end] 1fr [outer-end];
 }
 
 .templateColumns {
@@ -27,5 +26,5 @@
 }
 
 .two {
-    grid-area: sidebar;
+    grid-area: inner;
 }
