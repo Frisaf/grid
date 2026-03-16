@@ -8,8 +8,7 @@ body {
 
 .gridContainer {
     display: grid;
-    width: 60%;
+    width: 80%;
     /* place-content: center; */
     margin-inline: auto;
-    gap: 3px;
 }
