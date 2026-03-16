@@ -2,9 +2,12 @@
 
 .gridContainer {
     display: grid;
-    grid-template-areas: "content content" "content content";
-    grid-template-rows: 100px 100px;
-    grid-template-columns: 1fr 1fr;
+    height: 500px;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(3, 80px);
+    grid-gap: 0.5em;
+    align-content: space-evenly;
+    border: 5px solid black;
 }
 
 .templateColumns {
@@ -19,7 +22,7 @@
     color: white;
 }
 
-.one, .two, .three {
+/* .one, .two, .three {
     grid-area: content;
 }
 
@@ -33,4 +36,4 @@
 
 .three {
     align-self: end;
-}
+} */

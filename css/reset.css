@@ -9,7 +9,7 @@ body {
 .gridContainer {
     display: grid;
     width: 60%;
-    place-content: center;
+    /* place-content: center; */
     margin-inline: auto;
     gap: 3px;
 }
