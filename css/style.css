@@ -1,13 +1,15 @@
 @import url(reset.css);
 
-.gridContainer {
+main {
     display: grid;
-    height: 500px;
-    grid-template-columns: repeat(4, 80px);
-    grid-template-rows: repeat(3, 80px);
+    height: 1400px;
+    grid-template-rows: 400px 300px 1fr;
     grid-gap: 0.5em;
     align-content: space-evenly;
-    border: 5px solid black;
+    display: grid;
+    width: 60%;
+    margin-inline: auto;
+    gap: 1rem;
 }
 
 .templateColumns {
@@ -20,6 +22,53 @@
     border: 3px solid black;
     border-radius: 10px;
     color: white;
+    height: 100%;
+}
+
+.row1 {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 1rem;
+    grid-row: 1;
+}
+
+.row2 {
+    grid-row: 2
+}
+
+.row3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    grid-row: 3
+}
+
+.textbox {
+    padding: 10px;
+    color: black;
+    border: 3px solid black;
+}
+
+.one {
+    display: grid;
+    grid-template-rows: 70px 1fr 150px;
+    text-align: left;
+
+    .textbox {
+        background-color: #fbc6b5;
+    }
+
+    .a {
+        grid-row: 1;
+    }
+
+    .b {
+        grid-row: 3;
+        width: 150px;
+        height: fit-content;
+        justify-self: end;
+        margin-right: 100px;
+    }
 }
 
 /* .one, .two, .three {
@@ -34,6 +83,4 @@
     align-self: center;
 }
 
-.three {
-    align-self: end;
-} */
+*/
