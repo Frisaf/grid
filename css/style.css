@@ -2,11 +2,10 @@
 
 main {
     display: grid;
-    height: 1400px;
-    grid-template-rows: 400px 300px 1fr;
+    height: fit-content;
+    grid-template-rows: 400px 300px 600px;
     grid-gap: 0.5em;
     align-content: space-evenly;
-    display: grid;
     width: 60%;
     margin-inline: auto;
     gap: 1rem;
@@ -73,7 +72,7 @@ main {
 
     .b {
         grid-row: 3;
-        width: 150px;
+        width: 25%;
         height: fit-content;
         justify-self: end;
         margin-right: 100px;
@@ -96,22 +95,21 @@ main {
     .b {
         grid-row: 2;
         height: fit-content;
-        width: 200px;
+        width: 40%;
         margin-left: 20px;
-        margin-top: 20px;
     }
 
     .c {
         grid-row: 3;
-        width: 200px;
+        width: 40%;
         margin-left: 40px;
     }
 
     .d {
         grid-row: 4;
-        width: 180px;
+        width: 40%;
         justify-self: center;
-        margin-top: 20px;
+        align-self: end;
     }
 }
 
@@ -133,14 +131,14 @@ main {
     }
 
     .b {
-        width: 150px;
+        width: 35%;
         margin-inline: auto;
         grid-row: 2;
         grid-column: 2;
     }
 
     .c {
-        width: 150px;
+        width: 35%;
         grid-row: 2 / 4;
         grid-column: 3;
         margin-top: 50px;
@@ -150,7 +148,7 @@ main {
 
 .four {
     display: grid;
-    grid-template-rows: 100px 100px 1fr 200px;
+    grid-template-rows: 150px 150px 1fr 250px;
 
     .a {
         grid-row: 1;
@@ -158,12 +156,86 @@ main {
 
     .b {
         grid-row: 2;
-        width: 120px;
+        width: 50%;
         margin-inline: auto;
     }
 
     .c {
         grid-row: 4;
         align-self: end;
+    }
+}
+
+.a, .b, .c, .d {
+    max-width: 100%;
+}
+
+.mobileCut {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    main {
+        width: 99%;
+        max-width: 100%;
+        grid-template-rows: 820px repeat(2, 330px) 1850px;
+        grid-template-columns: unset;
+    }
+
+    .row1 {
+        grid-template-rows: repeat(2, 400px);
+        grid-template-columns: unset;
+    }
+
+    .row2 {
+        grid-row: 2;
+        overflow: hidden;
+    }
+
+    .row3 {
+        grid-row: 4;
+        grid-template-rows: repeat(3, 600px);
+        grid-template-columns: unset;
+    }
+
+    .one {
+        grid-row: 1;
+    }
+
+    .two {
+        grid-row: 2;
+
+        .b {
+            width: 50%;
+            margin-top: 25px;
+        }
+        
+        .c {
+            width: 70%;
+        }
+
+        .d {
+            width: 50%;
+        }
+    }
+
+    .three {
+        .b, .c {
+            display: none;
+        }
+    }
+
+    .mobileCut {
+        display: grid;
+
+        .mobileA {
+            width: 30%;
+            margin-top: 40px;
+        }
+
+        .mobileB {
+            width: 40%;
+            justify-self: end;
+        }
     }
 }
